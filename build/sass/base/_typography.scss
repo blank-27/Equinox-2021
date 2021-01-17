@@ -1,0 +1,81 @@
+////////////////CUSTOM SCROLL BAR
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f100; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    
+    border-radius:10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+  p {
+    color: #FFFF82;
+  }
+  
+  /* Set the font, lean the board, position it */
+  #board {
+
+    display: none;
+
+
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    transform: perspective(300px) rotateX(25deg);  
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 600%;
+    height: 50em;
+    width: 18em;
+    bottom: 0;
+    left: 50%;
+    transition: hover 1s;
+
+
+  }
+  
+  #board:after {    
+    position: absolute;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Set the scrolling animation and position it */
+  #content {
+    animation: scroll 50s linear;
+    position: absolute;
+    top: 100%;
+  }
+  
+  #title, #subtitle {
+    text-align: center;
+  }
+  
+  @keyframes scroll {
+      0% {
+          top: 100%;
+      }
+      100% {
+          top: -170%;
+      }
+  }
